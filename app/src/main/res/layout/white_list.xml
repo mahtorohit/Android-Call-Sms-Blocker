@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ListView android:layout_height="200dip"  android:id="@+id/listView1" android:layout_width="match_parent"></ListView>
+    <TextView android:layout_marginTop="20dip"  android:text="Black List" android:layout_height="wrap_content" android:id="@+id/textView2" android:layout_width="wrap_content" android:layout_above="@+id/listView1" android:layout_alignLeft="@+id/listView1" android:layout_alignRight="@+id/listView1"></TextView>
+    <Button android:layout_height="wrap_content" android:id="@+id/button1" android:layout_width="wrap_content" android:layout_below="@+id/listView1" android:layout_alignLeft="@+id/listView1" android:layout_alignRight="@+id/listView1" android:text="@string/del" android:onClick="delete"></Button>
+    <TextView android:textSize="25dip" android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_below="@+id/button1" android:layout_width="wrap_content" android:layout_alignLeft="@+id/button1" android:text="@string/no"></TextView>
+    <EditText  android:layout_height="wrap_content" android:id="@+id/editText1" android:text="" android:layout_toRightOf="@+id/textView1" android:layout_width="200dip" android:layout_alignTop="@+id/textView1" ></EditText>
+    <Button android:onClick="add" android:layout_marginTop="15dip" android:layout_height="wrap_content" android:id="@+id/button2" android:layout_width="wrap_content" android:layout_below="@+id/editText1" android:layout_alignLeft="@+id/editText1" android:text="Add"></Button>
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:uses-sdk="http://schemas.android.com/apk/res-auto"
+    package="rohit.tracker.app"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+
+<uses-sdk android:minSdkVersion="23"/>
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name">
+        <activity
+            android:name=".SlashScreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".CallBlockerBroadcast">
+            <intent-filter android:priority="999999999">
+                <action android:name="android.intent.action.PHONE_STATE" />
+
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".SMSBlockerBroadcast">
+            <intent-filter android:priority="999999999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".AutoStartBroadcast">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+
+        <service
+            android:name=".CallListenerService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SMSBlockerActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".CallBlockerActivity"
+            android:label="@string/app_name" />
+
+        <activity
+            android:name=".EditBlackList"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".EditWhiteList"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SMSEditBlackList"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".SMSEditWhiteList"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".TrackerActivity"
+            android:label="@string/app_name" />
+    </application>
+
+
+</manifest>
