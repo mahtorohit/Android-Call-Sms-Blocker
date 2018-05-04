@@ -1,6 +1,5 @@
-package rohit.tracker.app;
+package rohit.tracker.app.activity;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -9,9 +8,11 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
+
+import rohit.tracker.app.R;
 
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 import static android.Manifest.permission.CALL_PHONE;
@@ -23,7 +24,7 @@ import static android.Manifest.permission.READ_SMS;
 import static android.Manifest.permission.SEND_SMS;
 import static android.Manifest.permission.RECEIVE_BOOT_COMPLETED;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     /**
      * Called when the activity is first created.
      */

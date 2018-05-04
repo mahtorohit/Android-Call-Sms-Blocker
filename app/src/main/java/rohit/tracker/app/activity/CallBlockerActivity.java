@@ -1,13 +1,16 @@
-package rohit.tracker.app;
+package rohit.tracker.app.activity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
-public class CallBlockerActivity extends Activity {
+import rohit.tracker.app.R;
+import rohit.tracker.app.util.DataManger;
+
+public class CallBlockerActivity extends AppCompatActivity {
     ToggleButton toggel_black_list, toggel_white_list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +35,12 @@ public class CallBlockerActivity extends Activity {
     }
 
     public void editblk(View v) {
-        Intent i = new Intent(this, EditBlackList.class);
+        Intent i = new Intent(this, EditBlackListActivity.class);
         startActivity(i);
     }
 
     public void whitelist(View v) {
-        Intent i = new Intent(this, EditWhiteList.class);
+        Intent i = new Intent(this, EditWhiteListActivity.class);
         startActivity(i);
     }
 

@@ -1,4 +1,4 @@
-package rohit.tracker.app;
+package rohit.tracker.app.services;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

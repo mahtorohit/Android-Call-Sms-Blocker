@@ -9,3 +9,7 @@
 4. White list SMS
 5. Anti theft alert
 
+License
+----
+
+MIT

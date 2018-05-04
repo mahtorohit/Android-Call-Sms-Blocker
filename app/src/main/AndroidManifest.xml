@@ -20,7 +20,7 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name">
         <activity
-            android:name=".SlashScreen"
+            android:name=".activity.SlashScreen"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,19 +28,19 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".CallBlockerBroadcast">
+        <receiver android:name=".services.CallBlockerBroadcast">
             <intent-filter android:priority="999999999">
                 <action android:name="android.intent.action.PHONE_STATE" />
 
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".SMSBlockerBroadcast">
+        <receiver android:name=".services.SMSBlockerBroadcast">
             <intent-filter android:priority="999999999">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
         </receiver>
-        <receiver android:name=".AutoStartBroadcast">
+        <receiver android:name=".services.AutoStartBroadcast">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -48,33 +48,33 @@
 
 
         <service
-            android:name=".CallListenerService"
+            android:name=".services.CallListenerService"
             android:enabled="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".SMSBlockerActivity"
+            android:name=".activity.SMSBlockerActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".CallBlockerActivity"
+            android:name=".activity.CallBlockerActivity"
             android:label="@string/app_name" />
 
         <activity
-            android:name=".EditBlackList"
+            android:name=".activity.EditBlackListActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".EditWhiteList"
+            android:name=".activity.EditWhiteListActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".SMSEditBlackList"
+            android:name=".activity.SMSEditBlackListActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".SMSEditWhiteList"
+            android:name=".activity.SMSEditWhiteListActivity"
             android:label="@string/app_name" />
         <activity
-            android:name=".TrackerActivity"
+            android:name=".activity.TrackerActivity"
             android:label="@string/app_name" />
     </application>
 

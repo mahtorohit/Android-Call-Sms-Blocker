@@ -1,4 +1,4 @@
-package rohit.tracker.app;
+package rohit.tracker.app.activity;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,7 +18,10 @@ import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class SMSEditBlackList extends Activity {
+import rohit.tracker.app.R;
+import rohit.tracker.app.util.DBHelper;
+
+public class SMSEditBlackListActivity extends AppCompatActivity {
 	ArrayList<String> no;
 	ArrayAdapter<String> lis;
 	SQLiteDatabase db;

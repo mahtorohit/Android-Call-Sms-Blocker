@@ -1,23 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent" >
-    <TextView android:layout_marginLeft="70dip" android:layout_alignParentTop="true" android:layout_height="wrap_content" android:id="@+id/textView1" android:layout_width="wrap_content" android:text="SMS Block" android:textSize="40dip"></TextView>
-    
-    <Button android:id="@+id/button2"  android:onClick="whitelist"
-    android:text="Edit White List" 
-    android:layout_marginTop="20dip"
-    android:layout_height="wrap_content" 
-    android:layout_below="@+id/button1" 
-    android:layout_width="wrap_content" 
-    android:layout_alignLeft="@+id/button1" 
-    android:layout_alignRight="@+id/button1"></Button>
-    
-    
-    <ToggleButton android:onClick="edit_white_list" android:layout_toRightOf="@+id/button2" android:layout_height="wrap_content" android:id="@+id/toggleButton2" android:text="ToggleButton" android:layout_width="wrap_content" android:layout_alignTop="@+id/button2" android:layout_alignBottom="@+id/button2"></ToggleButton>
-    <ToggleButton android:onClick="setBlackList"  android:layout_toRightOf="@+id/button1" android:layout_height="wrap_content" android:id="@+id/toggleButton1" android:text="ToggleButton" android:layout_width="wrap_content" android:layout_alignTop="@+id/button1" android:layout_alignBottom="@+id/button1"></ToggleButton>
-    <Button android:onClick="editblk"  android:layout_marginTop="70dip" android:id="@+id/button1" android:text="Edit Black List" android:layout_height="wrap_content"  android:layout_width="200dip" android:width="200dip" android:layout_alignParentLeft="true"></Button>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="70dip"
+        android:text="SMS Block"
+        android:textSize="40dip"></TextView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="20dip"
+        android:onClick="whitelist"
+        android:text="Edit White List"></Button>
+
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignTop="@+id/button2"
+        android:layout_toRightOf="@+id/button2"
+        android:onClick="edit_white_list"
+        android:text="ToggleButton"></ToggleButton>
+
+    <ToggleButton
+        android:id="@+id/toggleButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignTop="@+id/button1"
+        android:layout_toRightOf="@+id/button1"
+        android:onClick="setBlackList"
+        android:text="ToggleButton"></ToggleButton>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="70dip"
+        android:width="200dip"
+        android:onClick="editblk"
+        android:text="Edit Black List"></Button>
 </RelativeLayout>
    
     

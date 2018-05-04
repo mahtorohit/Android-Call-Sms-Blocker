@@ -1,14 +1,10 @@
-package rohit.tracker.app;
+package rohit.tracker.app.util;
 
-import android.Manifest;
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.v4.app.ActivityCompat;
-import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -96,7 +92,7 @@ public class DataManger {
 
     private Boolean isBlackListed(String incomingNumber) {
         Boolean flag = false;
-        Cursor cur = db.query("blklst_call", null, null, null, null, null, null);
+        Cursor cur = db.rawQuery("Select * from blklst_call",null);
         while (cur.moveToNext()) {
             if (incomingNumber.equals(cur.getString(0))) {
                 flag = true;
@@ -110,7 +106,8 @@ public class DataManger {
 
     private Boolean isWhiteListed(String incomingNumber) {
         Boolean flag = true;
-        Cursor cur = db.query("whitlist_call", null, null, null, null, null, null);
+        Cursor cur = db.rawQuery("Select * from whitlist_call",null);
+
         while (cur.moveToNext()) {
             if (incomingNumber.equals(cur.getString(0))) {
                 flag = false;
@@ -121,12 +118,12 @@ public class DataManger {
         return flag;
     }
 
-    public boolean checkSim() {
+    public boolean checkTrackerService() {
         String onoff = "";
         Cursor cursor =null;
         try {
             db = helper.getWritableDatabase();
-            cursor = db.query("track_info", null, null, null, null, null, null);
+            cursor = db.rawQuery("Select * from track_info",null);
             while (cursor.moveToNext()) {
                 onoff = cursor.getString(6);
             }
@@ -171,5 +168,15 @@ public class DataManger {
             numbers.add( cursor.getString(5));
         }
         return numbers;
+    }
+
+
+    public void addSupportNumbers(String[] numbers,String simSerialNumber){
+        ContentValues val = new ContentValues();
+        val.put("sim", simSerialNumber);
+        for(String num: numbers) {
+            val.put("hlp", num);
+        }
+        db.insert("track_info", null, val);
     }
 }

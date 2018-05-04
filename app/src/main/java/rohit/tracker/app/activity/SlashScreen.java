@@ -1,4 +1,4 @@
-package rohit.tracker.app;
+package rohit.tracker.app.activity;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -7,8 +7,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
-public class SlashScreen extends Activity {
+import rohit.tracker.app.R;
+import rohit.tracker.app.activity.MainActivity;
+
+public class SlashScreen extends AppCompatActivity {
 	int a=0;
 public static String act_ser_cal="";
 public static String act_ser_sms="";

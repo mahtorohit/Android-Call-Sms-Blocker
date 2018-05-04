@@ -1,4 +1,4 @@
-package rohit.tracker.app;
+package rohit.tracker.app.services;
 
 import java.lang.reflect.Method;
 
@@ -12,6 +12,8 @@ import android.media.AudioManager;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
 import android.widget.Toast;
+
+import rohit.tracker.app.util.DataManger;
 
 public class CallBlockerBroadcast extends BroadcastReceiver {
 
