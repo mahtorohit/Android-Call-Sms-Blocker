@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, tracker!</string>
-    <string name="app_name">Tracker</string>
-    <string name="bl">Call Blocking</string>
-    <string name="sms">SMS Bloking</string>
-    <string name="trk">Anti Theft</string>
-    <string name="clbl">Call Block</string>
-    <string name="del">Delete</string>
-    <string name="cls">Clear</string>
-    <string name="no">New No :</string>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

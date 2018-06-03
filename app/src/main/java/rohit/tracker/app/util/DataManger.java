@@ -24,9 +24,9 @@ public class DataManger {
         if (instance == null) {
             instance = new DataManger();
         }
-        db = helper.getWritableDatabase();
         con = con;
         helper = new DBHelper(con, "TrackerActivity", null, 2);
+        db = helper.getWritableDatabase();
         return instance;
     }
 
