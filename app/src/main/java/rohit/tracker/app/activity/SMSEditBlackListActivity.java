@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -33,7 +34,7 @@ public class SMSEditBlackListActivity extends AppCompatActivity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sms_edit_block);
-		
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 		sp =(ListView)findViewById(R.id.listView1);
 		phno =(EditText)findViewById(R.id.editText1);
 		  SQLiteOpenHelper helper = new DBHelper(this, "TrackerActivity", null, 2);

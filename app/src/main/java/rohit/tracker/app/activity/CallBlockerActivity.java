@@ -2,6 +2,7 @@ package rohit.tracker.app.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
@@ -16,6 +17,9 @@ public class CallBlockerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.call_block);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("Call Blocker");
+
         String active_service = DataManger.getInstance(this).getActiveCallService();
         toggel_black_list = (ToggleButton) findViewById(R.id.toggleButton1);
         toggel_white_list = (ToggleButton) findViewById(R.id.toggleButton2);
